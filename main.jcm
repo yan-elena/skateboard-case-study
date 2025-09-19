@@ -1,21 +1,16 @@
-/*
-    JaCaMo Application File Template
-    --------------------------------
-
-    This file defines the initial state of the MAS (initial agents, environment, organisation, ....)
-
-    (see jacamo/doc/jcm.html for more information about what can be defined in this file)
-
-    JaCaMo 1.2
-*/
-
 mas main {
 
-    agent bob: sample_agent.asl {
-      focus: w.c1 
+    // normative agent with adaptation capability
+    agent skHandler {
+        //ag-class: adaptation.agent.ANormativeAgentSAI("src/reg/alice_norms.npl", "src/reg/alice_constitutive.sai")
     }
 
-    workspace w {
-      artifact c1: example.Counter(3) 
+    organisation org {
+        group skgroup: skgroup {
+            players: skHandler skHandler
+                     //trunkWsHandler trunkWsHandler
+                     //wheelWsHandler wheelWsHandler
+                     //torqueWsHandler torqueWsHandler
+        }
     }
 }
