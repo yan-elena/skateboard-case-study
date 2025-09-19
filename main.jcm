@@ -3,6 +3,11 @@ mas main {
     // normative agent with adaptation capability
     agent skHandler {
         //ag-class: adaptation.agent.ANormativeAgentSAI("src/reg/alice_norms.npl", "src/reg/alice_constitutive.sai")
+        focus:  wsp.art
+    }
+
+    workspace wsp {
+        artifact art : WkArtifact()
     }
 
     organisation org {
