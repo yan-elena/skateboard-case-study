@@ -12,10 +12,12 @@ mas main {
 
     organisation org {
         group skgroup: skgroup {
+            responsible-for: s1
             players: skHandler skHandler
                      //trunkWsHandler trunkWsHandler
                      //wheelWsHandler wheelWsHandler
                      //torqueWsHandler torqueWsHandler
         }
+        scheme s1: assemblySkSch
     }
 }

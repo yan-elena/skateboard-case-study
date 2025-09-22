@@ -40,27 +40,35 @@
 </group-specification>
 </structural-specification>
 
-<!--<functional-specification>-->
-<!--    <scheme id="scheme1">-->
-<!--        <goal id="goal1">-->
-<!--            <plan operator="sequence">-->
+<functional-specification>
+    <scheme id="assemblySkSch">
+        <goal id="assemblySkateboard">
+            <plan operator="sequence">
 <!--                <goal id="goal2"    ttf="20 minutes" ds="description goal2"/>-->
 <!--                <goal id="goal3"/>-->
 <!--                <goal id="goal4"/>-->
-<!--            </plan>-->
-<!--        </goal>-->
+                <goal id="trunkInstalled"/>
+                <goal id="wheelAssembled"/>
+                <goal id="trunkTorqued"/>
+            </plan>
+        </goal>
 
-<!--        <mission id="mission1" min="1" max="1">-->
-<!--            <goal id="goal2"/>-->
-<!--            <goal id="goal4"/>-->
-<!--        </mission>-->
+        <mission id="mTrunk" min="1" max="1">
+            <goal id="trunkInstalled"/>
+        </mission>
 <!--        <mission id="mission2" min="1" max="1">-->
 <!--            <goal id="goal3"/>-->
 <!--        </mission>-->
-<!--    </scheme>-->
-<!--</functional-specification>-->
+    </scheme>
+</functional-specification>
 
-<!--<normative-specification>-->
+<normative-specification>
+<!--    <npl-norms>-->
+<!--&lt;!&ndash;        a :- t &amp; k.&ndash;&gt;-->
+<!--&lt;!&ndash;        norm npl1: a &amp; v(X) -> obligation(bob,true,g(X),`now`+`1 day`).&ndash;&gt;-->
+<!--&lt;!&ndash;        norm npl2: a &amp; b -> fail(test).&ndash;&gt;-->
+<!--        norm n1 -> obligation(skHandler,true,trunkAssembled,`20 seconds`).-->
+<!--    </npl-norms>-->
 <!--    &lt;!&ndash;-->
 <!--       setup of Moise properties (e.g. role compatibility) handling (regimented or not)-->
 
@@ -72,14 +80,14 @@
 
 <!--       some examples follow-->
 <!--    &ndash;&gt;-->
-<!--    &lt;!&ndash; properties>-->
+<!--    <properties>-->
 <!--        <property id="default_management"  value="fail" />-->
 <!--        <property id="role_compatibility"  value="prohibition" />-->
 <!--        <property id="mission_cardinality" value="prohibition" />-->
-<!--    </properties&ndash;&gt;-->
+<!--    </properties>-->
 
 <!--    &lt;!&ndash; the norms of the application &ndash;&gt;-->
-<!--    <norm id="norm1" type="obligation" role="role2" mission="mission1"/>-->
-<!--</normative-specification>-->
+    <norm id="norm1" type="obligation" role="skHandler" mission="mTrunk"/>
+</normative-specification>
 
 </organisational-specification>
