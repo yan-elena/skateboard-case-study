@@ -1,23 +1,34 @@
 mas main {
 
-    // normative agent with adaptation capability
-    agent skHandler {
+    // Domain Agents
+    agent skHandler : domain/skHandler.asl {
         //ag-class: adaptation.agent.ANormativeAgentSAI("src/reg/alice_norms.npl", "src/reg/alice_constitutive.sai")
         focus:  wsp.art
     }
 
+    // Architecture Regulation Management
+    workspace rma {
+        artifact regArt: sai.bridges.jacamo.NormativeBoardSai
+    }
+
+
+    // Domain
     workspace wsp {
         artifact art : WkArtifact()
     }
+
+
+    // Architecture Regulation Management
+    institution inst:rega.sai{
+       workspaces: rma
+   }
 
     organisation org {
         group skgroup: skgroup {
             responsible-for: s1
             players: skHandler skHandler
-                     //trunkWsHandler trunkWsHandler
-                     //wheelWsHandler wheelWsHandler
-                     //torqueWsHandler torqueWsHandler
         }
         scheme s1: assemblySkSch
     }
+
 }
