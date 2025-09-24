@@ -7,7 +7,7 @@ public class WkArtifact extends Artifact {
     void installTrunk() {
         log("operation install trunk started...");
         try {
-            wait(1800);
+            Thread.sleep(1800);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -18,7 +18,7 @@ public class WkArtifact extends Artifact {
     void assemblyWheel() {
         log("operation assembly wheel started...");
         try {
-            wait(8000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
@@ -29,7 +29,7 @@ public class WkArtifact extends Artifact {
     void torqueTrunk() {
         log("operation torque trunk started...");
         try {
-            wait(2000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
