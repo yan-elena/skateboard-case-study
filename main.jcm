@@ -7,7 +7,7 @@ mas main {
 
     // Organizational Agent
     agent orgAgent : organization/orgAgent.asl {
-        //focus:  reg.regArt
+        focus:  reg.regArt
         //        inst_reg.inst_reg_art //focus on the institutional artifact
     }
 
@@ -18,16 +18,17 @@ mas main {
     }
 
 
-    // Domain
+    // Domain Process
     workspace wsp {
         artifact art : WkArtifact()
     }
 
-/*
-    // Architecture Regulation Management
+    // Domain Regulation
     workspace reg {
-        artifact regArt: sai.bridges.jacamo.NormativeBoardSai
+        artifact regArt: ora4mas.nopl.NormativeBoard
     }
+
+/*
 
     // Organization-Centric Regulation Management
     institution inst_reg: src/reg/domain_constitutive.sai {

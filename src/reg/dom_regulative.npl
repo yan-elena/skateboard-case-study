@@ -1,4 +1,4 @@
-scope main {
+scope domain {
 
     norm n1: order
        -> obligation(skHandler, true, trunkInstalled, `10 seconds`).

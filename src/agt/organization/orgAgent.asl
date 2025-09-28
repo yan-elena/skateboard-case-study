@@ -10,11 +10,21 @@
 
 +!start : true
     <-  .print("hello world.");
-        makeArtifact(nb1,"ora4mas.nopl.NormativeBoard",[],AId);
-        focus(AId);
         debug(inspector_gui(on));
-        load("src/reg/dom_regulative.npl");
+        !setup_reg;
         .
+
+//connect norms to institution
++!setup_reg: focusing(RegArt,regArt,_,_,reg,_)
+    <-  load("src/reg/dom_regulative.npl");
+        .print("domain regulations loaded").
+
+ +!setup_reg
+     <-  .wait(focusing(A,_,_,B,inst_reg,_)&focusing(ArtSai,inst_reg_art,_,_,inst_reg,_) & focusing(RegArt,regArt,_,_,reg,_));
+         !setup_reg.
+
+
+
 
 //connect norms to institution
 +!setup_sai: focusing(ArtSai,inst_reg_art,_,_,inst_reg,_) & focusing(RegArt,regArt,_,_,reg,_)
