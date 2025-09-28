@@ -1,0 +1,10 @@
+institution_id : inst_rma.
+
+status_functions:
+
+states: required(arc(RME, Fun, Con)).
+
+
+constitutive_rules:
+
+1: bottleneck count-as required(arc(RME, Fun, Con)) while arc(RME, [ocr], fcr).
