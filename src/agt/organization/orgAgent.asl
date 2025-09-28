@@ -14,13 +14,13 @@
         .
 
 //connect norms to institution
-+!setup_sai: focusing(ArtSai,inst_rma_art,_,_,inst_rma,_) & focusing(RegArt,regArt,_,_,rma,_)
++!setup_sai: focusing(ArtSai,inst_reg_art,_,_,inst_reg,_) & focusing(RegArt,regArt,_,_,reg,_)
     <-  getSaiEngine(SE)[artifact_id(ArtSai)];
         setInstitution(SE)[artifact_id(RegArt)];
-        load("src/reg/rega_regulative.npl").
+        load("src/reg/domain_regulative.npl").
 
 +!setup_sai
-    <-  .wait(focusing(A,_,_,B,inst_rma,_)&focusing(ArtSai,inst_rma_art,_,_,inst_rma,_) & focusing(RegArt,regArt,_,_,rma,_));
+    <-  .wait(focusing(A,_,_,B,inst_reg,_)&focusing(ArtSai,inst_reg_art,_,_,inst_reg,_) & focusing(RegArt,regArt,_,_,reg,_));
         !setup_sai.
 
 
