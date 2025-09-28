@@ -2,13 +2,13 @@ mas main {
 
     // Architecture Agents
     agent arcHandler : architecture/arcHandler.asl {
-
+        ag-class: adaptation.agent.ANormativeAgentSAI("src/reg/arc_regulative.npl", "src/reg/arc_constitutive.sai")
     }
 
     // Organizational Agent
     agent orgAgent : organization/orgAgent.asl {
-        focus:  reg.regArt
-                inst_reg.inst_reg_art //focus on the institutional artifact
+        //focus:  reg.regArt
+        //        inst_reg.inst_reg_art //focus on the institutional artifact
     }
 
     // Domain Agents
@@ -28,13 +28,12 @@ mas main {
         artifact art : WkArtifact()
     }
 
-
+/*
     // Organization-Centric Regulation Management
     institution inst_reg: src/reg/domain_constitutive.sai {
        workspaces: reg
    }
 
-/*
     organisation org {
         group skgroup: skgroup {
             responsible-for: s1
