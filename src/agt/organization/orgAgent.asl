@@ -10,7 +10,7 @@
 
 +!start : true
     <-  .print("hello world.");
-        !setup_sai;
+        //!setup_sai;
         .
 
 //connect norms to institution
