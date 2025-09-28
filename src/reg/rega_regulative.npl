@@ -1,0 +1,6 @@
+scope main {
+
+    norm n1: required(arc(RME, Fun, Con))
+       -> obligation(arcHandler, true, represented(REG), `never`).
+
+}
