@@ -1,5 +1,11 @@
 mas main {
 
+    // Architecture Agents
+    agent arcHandler : architecture/arcHandler.asl {
+        focus:  rma.regArt
+                inst_rma.inst_rma_art //focus on the institutional artifact
+    }
+
     // Domain Agents
     agent skHandler : domain/skHandler.asl {
         //ag-class: adaptation.agent.ANormativeAgentSAI("src/reg/alice_norms.npl", "src/reg/alice_constitutive.sai")
@@ -19,10 +25,11 @@ mas main {
 
 
     // Architecture Regulation Management
-    institution inst:rega.sai{
+    institution inst_rma: src/reg/rega_constitutive.sai {
        workspaces: rma
    }
 
+/*
     organisation org {
         group skgroup: skgroup {
             responsible-for: s1
@@ -30,5 +37,5 @@ mas main {
         }
         scheme s1: assemblySkSch
     }
-
+*/
 }
