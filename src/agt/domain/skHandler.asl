@@ -9,14 +9,28 @@
 /* Plans */
 
 +!start : true
-    <-  //debug(inspector_gui(on));
-        .wait(1000);
+    <-  .wait(1000);
         .print("hello world.");
         .
 
 +!trunkInstalled[scheme(S)]
     <-  installTrunk;
         .
+
++!wheelAssembled[scheme(S)]
+    <-  assemblyWheel;
+        .
+
++!trunkTorqued[scheme(S)]
+    <-  torqueTrunk;
+        .
+
+/*
++!trunkInstalled[scheme(S)]
+    <-  installTrunk;
+        .
+*/
+
 
 
 { include("$jacamo/templates/common-cartago.asl") }
