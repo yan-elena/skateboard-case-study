@@ -10,7 +10,10 @@
 
 +!start : true
     <-  .print("hello world.");
-        //!setup_sai;
+        makeArtifact(nb1,"ora4mas.nopl.NormativeBoard",[],AId);
+        focus(AId);
+        debug(inspector_gui(on));
+        load("src/reg/dom_regulative.npl");
         .
 
 //connect norms to institution

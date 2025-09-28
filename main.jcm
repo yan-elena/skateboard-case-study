@@ -17,11 +17,6 @@ mas main {
         focus:  wsp.art
     }
 
-    // Architecture Regulation Management
-    workspace reg {
-        artifact regArt: sai.bridges.jacamo.NormativeBoardSai
-    }
-
 
     // Domain
     workspace wsp {
@@ -29,6 +24,11 @@ mas main {
     }
 
 /*
+    // Architecture Regulation Management
+    workspace reg {
+        artifact regArt: sai.bridges.jacamo.NormativeBoardSai
+    }
+
     // Organization-Centric Regulation Management
     institution inst_reg: src/reg/domain_constitutive.sai {
        workspaces: reg

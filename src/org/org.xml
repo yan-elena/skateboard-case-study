@@ -87,7 +87,7 @@
 <!--    </properties>-->
 
 <!--    &lt;!&ndash; the norms of the application &ndash;&gt;-->
-    <norm id="norm1" type="obligation" role="skHandler" mission="mTrunk"/>
+<!--    <norm id="norm1" type="obligation" role="skHandler" mission="mTrunk"/>-->
 </normative-specification>
 
 </organisational-specification>

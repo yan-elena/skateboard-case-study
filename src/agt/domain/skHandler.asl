@@ -9,7 +9,7 @@
 /* Plans */
 
 +!start : true
-    <-  debug(inspector_gui(on));
+    <-  //debug(inspector_gui(on));
         .wait(1000);
         .print("hello world.");
         .
